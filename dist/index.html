@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head>   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no, address=no, email=no">
     <meta name="description" content="株式会社テキトウは東京を拠点に活動しているクリエイティブチームです。WEB制作、WEBコンサルティング、商品企画・開発と多岐にわたるサービスを展開している為お客様にご満足して頂けるサービスを提供することが可能となっております。">
     <meta name="keywords" content="WEB, WEB制作, WEBコンサルティング, 商品企画, 商品開発, マーケティングプロモーション, 広告代理事業, オンラインショップ運営">
-    <!-- SNS SEO-->
     <meta property="og:locale" content="ja_JP">
     <meta property="og:title" content="株式会社テキトウ | テキトウ、という名の物語。">
     <meta property="og:site_name" content="株式会社テキトウ | テキトウ、という名の物語。">
@@ -16,7 +15,652 @@
     <meta property="og:url" content="#">
     <meta property="og:image" content="#">
     <title>株式会社テキトウ | テキトウ、という名の物語。</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.css">
     <link rel="stylesheet" href="css/style.css">
-    <body> </body>
+    <link rel="stylesheet" href="css/jquery-letterfx.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stickyfill/2.1.0/stickyfill.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tuxsudo.min.js"></script>
+    <script type="text/javascript" src="js/jquery-letterfx.min.js"></script>
+    <script src="js/luxy.js"></script>
+    <script src="js/index.js"></script>
   </head>
+  <body>
+    <!-- loader-->
+    <div class="loader-wrap">
+      <div class="loader">Loading...</div>
+    </div>
+    <!--　ヘッダー-->
+    <header> 
+      <div class="logo"><a href="#home"><img class="logo-black" src="img/logo/logo.svg" alt="株式会社テキトウのロゴ" width="100%"><img class="logo-white" src="img/logo/logo-white.svg" alt="株式会社テキトウのロゴ" width="100%"></a></div>
+      <div class="menus">
+        <div class="menu-toggle menu-toggle-btn"><span></span><span></span><span></span></div>
+      </div>
+    </header>
+    <!--　ナビゲーション-->
+    <div class="nav">
+      <div class="u-in">
+        <div class="nav__bg"></div>
+        <div class="nav__content">
+          <div class="menu">
+            <div>
+              <ul class="menu__list">
+                <li><a class="menuLink" href="#home">
+                    <p class="menuLink__label"><span style="transform: matrix(1, 0, 0, 1, 0, 0);">HOME</span></p></a></li>
+                <li><a class="menuLink" href="#about">
+                    <p class="menuLink__label"><span style="transform: matrix(1, 0, 0, 1, 0, 0);">ABOUT</span></p></a></li>
+                <li><a class="menuLink" href="#work">
+                    <p class="menuLink__label"><span style="transform: matrix(1, 0, 0, 1, 0, 0);">WORK</span></p></a></li>
+              </ul>
+              <ul class="menu__list-down">
+                <li><a class="menuLink" href="#member">
+                    <p class="menuLink__label"><span style="transform: matrix(1, 0, 0, 1, 0, 0);">MEMBER</span></p></a></li>
+                <li><a class="menuLink" href="#company">
+                    <p class="menuLink__label"><span style="transform: matrix(1, 0, 0, 1, 0, 0);">COMPANY</span></p></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav__footer">
+            <div class="sns">
+              <ul>
+                <li class="tw"><a class="twitter" href="https://twitter.com/tres_innovation" target="_blank"><span class="icon"></span></a></li>
+                <li class="ig"><a class="instagram" href="https://www.instagram.com/tresinnovation/?hl=ja" target="_blank"><span class="icon"></span></a></li>
+                <li class="ct"><a class="contact" href="#contact" target="_blank"><span class="icon"></span></a></li>
+                <li class="wt"><a class="wantedly" href="https://www.wantedly.com/companies/tresinnovation" target="_blank"><span class="icon"><img src="img/nav/wantedly.png" alt="wantedlyのアイコン"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- メイン-->
+    <main>
+      <!-- first view-->
+      <section class="js-section" id="home">
+        <div id="home__inner">
+          <div id="home__img"><img src="img/logo/tekito-title.svg" alt="テキトウ"></div>
+          <p class="js-span-wrap-text" id="home__text">テキトウ、という名の物語。</p>
+        </div>
+        <div id="scroll">
+          <div class="scroll__inner"><span> </span>SCROLL</div>
+        </div>
+      </section>
+      <!-- images-->
+      <section class="fixed" id="open-images">
+        <div id="luxy">
+          <div class="images">
+            <div class="images-row luxy-el" data-speed-y="-5">
+              <div class="image-wrapper"><img src="img/common/memory-image27.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image41.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image24.jpg" alt="思い出の写真"></div>
+            </div>
+            <div class="images-row luxy-el" data-speed-y="-5">
+              <div class="image-wrapper"><img src="img/common/memory-image15.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image5.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image44.jpg" alt="思い出の写真"></div>
+            </div>
+            <div class="images-row luxy-el" data-speed-y="-5">
+              <div class="image-wrapper"><img src="img/common/memory-image32.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image36.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image38.jpg" alt="思い出の写真"></div>
+            </div>
+            <div class="images-row scroll-trigger-1 luxy-el" data-speed-y="-5">
+              <div class="image-wrapper"><img src="img/common/memory-image1.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image10.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image39.jpg" alt="思い出の写真"></div>
+            </div>
+            <div class="images-row-small luxy1 luxy-el" data-speed-y="8" data-offset="50">
+              <div class="image-wrapper"><img src="img/common/memory-image16.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image7.jpg" alt="思い出の写真"></div>
+            </div>
+            <div class="images-row-small luxy2 luxy-el" data-speed-y="8" data-offset="50">
+              <div class="image-wrapper"><img src="img/common/memory-image31.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image28.jpg" alt="思い出の写真"></div>
+            </div>
+            <div class="images-row-small luxy3 luxy-el" data-speed-y="8" data-offset="50">
+              <div class="image-wrapper"><img src="img/common/memory-image22.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image17.jpg" alt="思い出の写真"></div>
+            </div>
+            <div class="images-row-small luxy4 luxy-el" data-speed-y="8" data-offset="50">
+              <div class="image-wrapper"><img src="img/common/memory-image11.jpg" alt="思い出の写真"></div>
+              <div class="image-wrapper"><img src="img/common/memory-image12.jpg" alt="思い出の写真"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about-->
+      <section class="js-section" id="about" name="about" data-section-name="about">
+        <div id="inner">
+          <div class="mv-area mv-area-about-img" id="mv">
+            <div class="mv-area__img"><img src="img/about/about_mv_sub.jpg" alt="aboutのメインビジュアル"><img src="img/about/about_mv_sub_sp.jpg" alt="aboutのメインビジュアル">
+              <div class="mv-title"> <span class="sr">A</span><span class="sr">B</span><span class="sr">O</span><span class="sr">U</span><span class="sr">T</span></div>
+            </div>
+          </div>
+          <div class="black-bg">
+            <div class="ab-us">
+              <p class="white-text" id="ab-us-title">私たちのおもい</p>
+              <p class="white-text" id="ab-us-text-sub">適当とは、元来「適切かつ妥当」という意味があります。</p>
+              <p class="white-text show" id="ab-us-text">お金とは、モノの価値を示す指標の一つですが、本来の価値とは人によって、それぞれ異なるものだと考えます。<br>モノの真価とは！本当の感動とは！それを手にした瞬間ではなく、その先の「過程」にあるのではないでしょうか。<br>貴方にあった"適当"なモノから始まるたった一つの物語！手にして満足するのか、その先をも楽しめるのかどうかは貴方次第。<br>先に広がる無限の過程を「楽しみ」、モノの「価値高める」お手伝いをさせていただきます。</p>
+            </div>
+            <div class="ab-bg-image-inner">
+              <div class="ab-bg-image">
+                <div class="ab-bg-image__images luxy-el" data-horizontal="1" data-speed-x="-2">
+                  <ul class="image-row-1">
+                    <li>
+                      <div class="image-wrapper"><img src="img/common/memory-image42.jpg" alt="" width="500px"></div>
+                    </li>
+                    <li>
+                      <div class="image-wrapper"><img src="img/common/memory-image41.jpg" alt="" width="500px"></div>
+                    </li>
+                    <li>
+                      <div class="image-wrapper"><img src="img/common/memory-image44.jpg" alt="" width="500px"></div>
+                    </li>
+                    <li>
+                      <div class="image-wrapper"><img src="img/common/memory-image36.jpg" alt="" width="500px"></div>
+                    </li>
+                  </ul>
+                  <ul class="image-row-2">
+                    <li>
+                      <div class="image-wrapper"><img src="img/common/memory-image47.jpg" alt="" width="500px"></div>
+                    </li>
+                    <li>
+                      <div class="image-wrapper"><img src="img/common/memory-image36.jpg" alt="" width="500px"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="ab-us-vision">
+              <div class="ab-us-vision__inner">
+                <div>
+                  <p class="shooting-line-vi"></p>
+                  <p class="ab-us-vision__sub-text-0">VISION</p>
+                </div>
+                <div class="ab-text"><span class="ab-us-vision__sub-text white-text">Make the world smile</span>
+                  <p class="ab-us-vision__text white-text">世界中の人たちを<br>笑顔にす<span class="sr">る</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ab-us-mission">
+            <div class="ab-us-mission__inner">
+              <div>
+                <p class="shooting-line-mi"></p>
+                <p class="ab-us-mission__sub-text">MISSION</p>
+              </div>
+              <p class="ab-us-mission__text">ワクワクを<br>創造し続け<br>笑顔を生み続ける</p>
+            </div>
+          </div>
+          <div class="ab-us-value">
+            <div class="ab-us-value__inner">
+              <div>
+                <p class="shooting-line-va"></p>
+                <p class="ab-us-value__sub-text">VALUE</p>
+              </div>
+              <div class="ab-us-value__text">
+                <div class="ab-us-value__text-sgl"><span class="ab-us-value__text-l space">テ</span><span class="ab-us-value__text-m">ごころ  -  手心</span><br><span class="ab-us-value__text-s">一人一人に対して、愛情を持って接する。</span></div>
+                <div class="ab-us-value__text-sgl"><span class="ab-us-value__text-l space">キ</span><span class="ab-us-value__text-m">ごころ  -  気心</span><br><span class="ab-us-value__text-s">互いに何も隠す必要のない間柄を目指す。</span></div>
+                <div class="ab-us-value__text-sgl"><span class="ab-us-value__text-l space">ト</span><span class="ab-us-value__text-m">うしん  -  童心</span><br><span class="ab-us-value__text-s br">子供のような純粋な心を持ってワクワクを創造する。</span></div>
+                <div class="ab-us-value__text-sgl"><span class="ab-us-value__text-l space">ウ</span><span class="ab-us-value__text-m">しん  -  有心</span><br><span class="ab-us-value__text-s br">思慮を持ち、常に「心」の感じられる行動と判断を下す。</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- work-->
+      <section id="work">
+        <div class="inner">
+          <div class="mv-area mv-area-work-img" id="mv">
+            <div class="mv-area__img"><img src="img/work/work_mv_sub.jpg" alt="workのメインビジュアル"><img src="img/work/work_mv_sub_sp.jpg" alt="workのメインビジュアル">
+              <div class="mv-title"> <span class="sr">W</span><span class="sr">O</span><span class="sr">R</span><span class="sr">K</span></div>
+            </div>
+          </div>
+          <div class="wr-content">
+            <div class="wr-bg">
+              <p class="wr-bg__text">Biii</p>
+            </div>
+            <p class="wr-content__title">オンラインショップBiii</p>
+            <p class="wr-content__text">美とは人類がずっと追い求めていたもの。<br><br>楽して美しく(キレイ)になりたい。<br>誰に否定されても、きっと誰もが思う理想の方法。<br><br>楽<br><br>とは、サボることや、手を抜くことではありません。<br><br>楽とは、そうなる過程をも楽しむこと。<br>キレイになることはもちろん、<br>少しずつ美しくなっていく自分をも楽しむこと。<br><br>オンラインショップBiiiは、<br>「楽して美しくなりたい」<br><br>そんな女性を全力で応援いたします。</p>
+          </div>
+          <div class="wr-content-2">
+            <div class="wr-desc">
+              <div class="pro">
+                <h3 class="wr-title">PRODUCT</h3>
+                <ul class="pd-list">
+                  <li class="pd-list__item">
+                    <p class="img"><img src="img/work/shop-item1.jpg" alt="商品"></p>
+                  </li>
+                  <li class="pd-list__item">
+                    <p class="img"><img src="img/work/shop-item2.jpg" alt="商品"></p>
+                  </li>
+                  <li class="pd-list__item">
+                    <p class="img"><img src="img/work/shop-item3.jpg" alt="商品"></p>
+                  </li>
+                </ul>
+                <div class="view-site"><a class="view-site__link blank" href="https://biii.jp/" target="_blank">VIEW SITE</a></div>
+              </div>
+              <div class="ms">
+                <h3 class="wr-title">MISSION</h3>
+                <div class="ms-tile">
+                  <div class="ms-tile__inner">
+                    <div class="ms-tile-item ms-box1">
+                      <div class="tile-hov ms-tile--1">
+                        <div class="tile-hov__img"><img src="img/work/mission-img1.jpg"></div>
+                        <p class="icon-sign"><span></span><span></span></p>
+                      </div>
+                      <div class="ms-tile-item__inner">
+                        <dl class="tile-ttl">
+                          <dt class="small">マーケティングプロモーション</dt>
+                          <dt>
+                            MARKETING
+                            PROMOTION
+                          </dt>
+                          <dd>出会いのきっかけ創り。</dd>
+                        </dl>
+                        <div class="tile-cont">
+                          今日、SNSやYouTube、LINE広告など接触機会は様々あるものの、
+                          どうすれば商品の魅力を最大限伝えることができるのか？
+                          目まぐるしく変化する時代や環境に素早く対応し、最適な戦略を考え、施策実行・検証を繰り返し行います。
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ms-tile-item ms-box2">
+                      <div class="tile-hov ms-tile--2">
+                        <div class="tile-hov__img"><img src="img/work/mission-img2.jpg"></div>
+                        <p class="icon-sign"><span></span><span></span></p>
+                      </div>
+                      <div class="ms-tile-item__inner">
+                        <dl class="tile-ttl">
+                          <dt class="small">カスタマーサービス</dt>
+                          <dt>
+                             COSTOMER
+                            SERVICE
+                          </dt>
+                          <dd>安心できる環境作り。</dd>
+                        </dl>
+                        <div class="tile-cont">
+                          欲しいもの、購入した商品が当たり前に手元へ届く。
+                          そんな"当たり前"に想いを込めて、お客様対応をさせていただいております。
+                          直接手渡しでのお届けができないからこそ、込める想い！
+                          「どうすればよりお客様が心から安心して購入できるか？」を日々考え、
+                          ぬくもりを感じていただける対応を心掛けています。
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ms-tile-item ms-box3">
+                      <div class="tile-hov ms-tile--3">
+                        <div class="tile-hov__img"><img src="img/work/mission-img3.jpg"></div>
+                        <p class="icon-sign"><span></span><span></span></p>
+                      </div>
+                      <div class="ms-tile-item__inner">
+                        <dl class="tile-ttl">
+                          <dt class="small">カスタマーサクセス</dt>
+                          <dt>
+                            COSTOMER
+                            SUCCESS
+                          </dt>
+                          <dd>感動を与え過程を楽しませる。</dd>
+                        </dl>
+                        <div class="tile-cont">
+                          「継続は力なり」という諺があらわす通り、
+                          継続＝過程にこそ真の価値があると考える私たちは、「コツコツ」続けてもらう為のサポートは惜しみません。
+                          全てのお客様に、成功体験としての有意義な過程をお届けしたい！
+                          何をやればワクワクできるか？どうすれば喜んでいただけるのか？
+                          常に様々な企画を考え、皆さまの「コツコツ」を全力でお手伝いします。
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ms-tile-item ms-box4">
+                      <div class="tile-hov ms-tile--4">
+                        <div class="tile-hov__img"><img src="img/work/mission-img5.jpg"></div>
+                        <p class="icon-sign"><span></span><span></span></p>
+                      </div>
+                      <div class="ms-tile-item__inner">
+                        <dl class="tile-ttl">
+                          <dt class="small">プロダクトプランニング</dt>
+                          <dt>
+                             PRODUCT 
+                            PLANNING
+                          </dt>
+                          <dd>私たちが使いたくない物は絶対に作らない。</dd>
+                        </dl>
+                        <div class="tile-cont">
+                          「私たちが使いたくない物は絶対に作らない」
+                          売れるか？売れないか？ではなく、私たちが心から"面白い""使いたい"と思えるモノを形にしたい！
+                          だからこそ、商品を開発する上で一切妥協は致しません。
+                          時間や労力がかかっても、真に納得がいくまで何度も何度でも試行錯誤を重ねます。
+                          本当に納得できるからこそ、お客様はもちろん自分たちの家族や親友にもおすすめできます。
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ms-tile-item ms-box5">
+                      <div class="tile-hov ms-tile--5">
+                        <div class="tile-hov__img"><img src="img/work/mission-img4.jpg"></div>
+                        <p class="icon-sign"><span></span><span></span></p>
+                      </div>
+                      <div class="ms-tile-item__inner">
+                        <dl class="tile-ttl">
+                          <dt class="small">クリエイティブデザイン</dt>
+                          <dt>
+                             CREATIVE
+                            DESIGN
+                          </dt>
+                          <dd>「オシャレ」を創造し続け、商品価値を高める。</dd>
+                        </dl>
+                        <div class="tile-cont">
+                          どうすれば興味、関心を持ってもらえるのか？
+                          実際に手に取っていただいた商品を「オシャレ」「可愛い」「カッコイイ」と感じてもらい、
+                          持っている事それ自体がひとつのステータスになるようなデザイン、
+                          商品価値を最大限高められるクリエイティブを常に心掛け、制作しております。
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mv-area mv-area-member-img company-member" id="mv">
+            <div class="mv-area__img"><img src="img/member/member_mv_sub.jpg" alt="memberのメインビジュアル"><img src="img/member/member_mv_sub_sp.jpg" alt="memberのメインビジュアル">
+              <div class="mv-title-member"><span class="sr">M</span><span class="sr">E</span><span class="sr">M</span><span class="sr">B</span><span class="sr">E</span><span class="sr">R</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- member-->
+      <section id="member">
+        <div class="members-inner mv-area">
+          <div class="member-bg">
+            <p class="member-bg__text">MEMBER</p>
+          </div>
+          <ul class="members-list-up">
+            <li class="members-list-up__item">
+              <div class="img"><a href="#modal_01"><img src="img/member/yamada/yamada2@2x.jpg"><img src="img/member/yamada/yamada1@2x.jpg"></a></div>
+              <div class="remodal" data-remodal-id="modal_01">
+                <button class="remodal-close" data-remodal-action="close"></button>
+                <div class="remodal__box">
+                  <div class="remodal__inner">
+                    <div class="name-image"></div>
+                    <div class="remodal-text">
+                      <div class="remodal-text__m-txt">ポジティブに<br>生きる</div>
+                      <div class="remodal-text__s-txt">長い人生を歩んでいく限り、ミスや失敗はつきもの！それでも、考え方ひとつで、物事の見方は180度変わります。常に「今した失敗は、上手くいくのに必要な経験」って考えてます！失敗やミスを、受け入れた後にどう考え行動するのか、前のめり過ぎるほどのポジティブ思考で生きてます<br><br>週末は、ゴルフの打ちっぱなし→ジム→サウナ→晩酌が日課になってます。そして、お酒を飲まない日は、ほぼありません。「お酒を飲まない。。。」家でどう過ごしていいのか、見出すことができない。お酒を飲んでも、二日酔いにも滅多にならないから元気が続く！嫁にも「元気過ぎない？」と言われる自分が心地よくて！もっと元気になってしまう！負健康のループ！どこまで元気で居続ける事ができるのか、元気なじい様になりたい！</div>
+                    </div>
+                    <div class="remodal-prof">
+                      <div class="remodal-prof__img"><img src="img/member/yamada/yamada3@2x.jpg"></div>
+                      <div class="remodal-prof__prof-name">山田 伸一<span class="remodal-prof__prof-name-sub">代表取締役</span></div>
+                      <div class="remodal-prof__prof-txt">初めての社会人＝がってん寿司のキッチンバイト<br>上下関係の厳しさを知った＝引っ越しバイト<br>人間の欲深さを知った＝バーテン
+                        <bt></bt>サラリーマンに憧れて入社したブラック企業＝財務経理<br>仲間内で企業！ガムシャラに働いた＝WEB制作と通販会社
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="members-list-up__item">
+              <div class="img"><a href="#modal_02"><img src="img/member/miyazima/miyazima2@2x.jpg"><img src="img/member/miyazima/miyazima1@2x.jpg"></a></div>
+              <div class="remodal" data-remodal-id="modal_02">
+                <button class="remodal-close" data-remodal-action="close"></button>
+                <div class="remodal__box">
+                  <div class="remodal__inner">
+                    <div class="name-image"></div>
+                    <div class="remodal-text">
+                      <div class="remodal-text__m-txt">なんでもオッケー</div>
+                      <div class="remodal-text__s-txt">人からはよくメガネで色白で大人しそうだねと言われますけど、アウトドア派で学生時代はサッカーに打ち込み、大人になってからはスケートにBMXにピストバイクとタイヤのついてるものはなんでも好きで乗りこなせて収集癖もある典型的な男子でキャンプやフェスにも身体ひとつで行ってしまう程です！笑かと思いきやインドアな一面もあり一日中ゲームをやったり映画を見たりオールマイティーに人生を楽しんでいます！将来はガレージ付きの家にクラシックSUVとバイクを２台ほど買い、大好きな大型犬と子供と暮らしたいです！</div>
+                      <div class="other-foreword">
+                        <p class="other-foreword__title">座右の銘</p>
+                        <p class="other-foreword__text">老若男女</p>
+                      </div>
+                      <div class="other-foreword">
+                        <p class="other-foreword__title">好きな生き方</p>
+                        <p class="other-foreword__text">好きなことをやりたいようにやって年に1度フジロックに行く。</p>
+                      </div>
+                    </div>
+                    <div class="remodal-prof">
+                      <div class="remodal-prof__img"><img src="img/member/miyazima/miyazima3@2x.jpg"></div>
+                      <div class="remodal-prof__prof-name">宮嶋 崇至</div>
+                      <div class="remodal-prof__prof-txt">16歳の時大蔵興業<br>19歳の時舞伎町ホスト<br>職業訓練学校<br>25歳の時某制作会社<br>28歳の時トレスイノベーション株式会社<br>29歳の時株式会社TEKITO</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="members-list-up__item">
+              <div class="img"><a href="#modal_03"><img src="img/member/siraki/siraki3@2x.jpg"><img src="img/member/siraki/siraki2@2x.jpg"></a></div>
+              <div class="remodal" data-remodal-id="modal_03">
+                <button class="remodal-close" data-remodal-action="close"></button>
+                <div class="remodal__box">
+                  <div class="remodal__inner">
+                    <div class="name-image"></div>
+                    <div class="remodal-text">
+                      <div class="remodal-text__m-txt">マイペース</div>
+                      <div class="remodal-text__s-txt">ストレスなく楽しく自由にまいにち過ごしたい。<br><br>はじめまして！<br>オンラインショップBiiiでは責任者をさせていただいております、白木です☻お客様と関わらせていただく機会も多いので、日々親切・丁寧を心掛けています。<br>仕事もプライベートもメリハリがだいじ！将来は犬と猫に囲まれて幸せに暮らしたい！</div>
+                    </div>
+                    <div class="remodal-prof">
+                      <div class="remodal-prof__img"><img src="img/member/siraki/siraki1@2x.jpg"></div>
+                      <div class="remodal-prof__prof-name">白木 茉優</div>
+                      <div class="remodal-prof__prof-txt">学生時代、もつ鍋と焼肉のお店<br>スンドゥブ屋さん<br>内定決まっていた就職先で先行アルバイト<br>社会人になって、アパレル<br>株式会社TEKITO</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="members-list-up__item">
+              <div class="img"><a href="#modal_04"><img src="img/member/hattori/hattori2.jpg"><img src="img/member/hattori/hattori1.jpg"></a></div>
+              <div class="remodal" data-remodal-id="modal_04">
+                <button class="remodal-close" data-remodal-action="close"></button>
+                <div class="remodal__box">
+                  <div class="remodal__inner">
+                    <div class="name-image"></div>
+                    <div class="remodal-text">
+                      <div class="remodal-text__m-txt">童心忘れるべからず</div>
+                      <div class="remodal-text__s-txt">人は大人になるにつれて知識が増え、世界が広がり、価値観にも大きな変化が起きる生き物です。それは良い意味もあれば、悪い意味でも変化は起こるものだと思っています。変わるべきところと、変わってはいけないところ。懐かしい竹馬の友と再会した時、「やっぱり変わってないな」と互いに感じられる安心感。子どもの時には感じられていた暮らしの中にある小さな発見や感動を、大人になってもいつまでも変わらず感じ取れるようでいること。一歩間違えれば、大人になりきれないアダルトチルドレンと捉えられてしまうかもしれませんが、曇りのない眼、邪推のない頭、純粋な心子どもに学ぶ事とは、実はとても多いのではないでしょうか？それがどんなにくだらないことでも、誰にも理解されないようなことであっても、少しでも気になれば徹底的に調べ、本気で実践してみる。「大人の知恵や技術、経済力で子どものようなことを本気でやる」ことが、自分にとっての人生最大の幸せです。</div>
+                    </div>
+                    <div class="remodal-prof">
+                      <div class="remodal-prof__img"><img src="img/member/hattori/hattori3.jpg"></div>
+                      <div class="remodal-prof__prof-name">服部 能純</div>
+                      <div class="remodal-prof__prof-txt">秘密です。</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="members-list-up__item">
+              <div class="img"><a href="#modal_05"><img src="img/member/itazuka/itazuka3@2x.jpg"><img src="img/member/itazuka/itazuka1@2x.jpg"></a></div>
+              <div class="remodal" data-remodal-id="modal_05">
+                <button class="remodal-close" data-remodal-action="close"></button>
+                <div class="remodal__box">
+                  <div class="remodal__inner">
+                    <div class="name-image"></div>
+                    <div class="remodal-text">
+                      <div class="remodal-text__m-txt">『頑張れ』より<br>『大丈夫』と言う</div>
+                      <div class="remodal-text__s-txt">『頑張れ』と背中を押すのではなく、『大丈夫』て肩並べて、いつでも寄り添ってあげられる人でいたいです。今までも、そう生きてきました。<br><br>初めまして、飯塚です。デザイナーをさせていただいています。日課は『ワークアウト』『クリエイト』週課は『映画を２本鑑賞』『動画制作』この中でもワークアウトに力を入れています。がっしりしてる体でデザイナーってかっこよくないですか。笑夢は『オシャレな家に住むこと』毎週金曜日には友人などを招いて、パーティーを開きたいっていう妄想付きです。※入場料は何かしらのリキュールでOK！こんな僕ですが、精一杯より良いもの、オシャレなものを作っていきますので、どうぞよろしくお願い致します。</div>
+                    </div>
+                    <div class="remodal-prof">
+                      <div class="remodal-prof__img"><img src="img/member/itazuka/itazuka1@2x.jpg"></div>
+                      <div class="remodal-prof__prof-name">飯塚 昂二</div>
+                      <div class="remodal-prof__prof-txt">高校生になり初めて、居酒屋おしおでバイト<br>専門生になり業務スーパーの品出し、ケンタッキーのキッチンでバイト<br>専門生生活を焼き鳥屋すみれ赤羽店に捧げる        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- company-->
+      <section id="company">
+        <div class="mv-area mv-area-company-img" id="mv">
+          <div class="mv-area__img"><img src="img/company/company_mv_sub.jpg" alt="companyのメインビジュアル"><img src="img/company/company_mv_sub_sp.jpg" alt="companyのメインビジュアル">
+            <div class="mv-title-long"><span class="sr">C</span><span class="sr">0</span><span class="sr">M</span><span class="sr">P</span><span class="sr">A</span><span class="sr">N</span><span class="sr">Y</span></div>
+          </div>
+        </div>
+        <div class="company-inner">
+          <div class="company-bg">
+            <p class="company-bg__text">COMPANY</p>
+          </div>
+          <div class="mv-area-company"></div>
+          <div class="company-title"><span class="sr">C</span><span class="sr">O</span><span class="sr">M</span><span class="sr">P</span><span class="sr">A</span><span class="sr">N</span><span class="sr">Y</span>
+            <p class="company-title__line"></p>
+          </div>
+          <div class="p-company company-header">
+            <div class="company-header__title">
+              <h3 class="company-header__text">COMPANY PROFILE</h3>
+            </div>
+            <div class="p-company__table">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>社名</th>
+                    <td>株式会社テキトウ</td>
+                  </tr>
+                  <tr>
+                    <th>代表取締役</th>
+                    <td>山田 伸一</td>
+                  </tr>
+                  <tr>
+                    <th>資本金</th>
+                    <td>500万</td>
+                  </tr>
+                  <tr>
+                    <th>業務内容</th>
+                    <td>
+                       通信販売事業<br>商品企画<br>開発事業</td>
+                  </tr>
+                  <tr>
+                    <th>所在地</th>
+                    <td>
+                       〒153-0043<br><a class="blank" href="https://goo.gl/maps/YhmJX1u3DVu1dH187" target="_blank"> <span>東京都目黒区東山3-12-1　コジマビルC-2</span></a></td>
+                  </tr>
+                  <tr>
+                    <th>設立年月日</th>
+                    <td>2017年9月15日</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="company-header" id="access">
+            <div class="company-header__title">
+              <h3 class="company-header__text">ACCESS</h3>
+            </div>
+            <div id="access-content">
+              <p id="access-content__text">東急電鉄田園都市線「池尻大橋」駅より徒歩5分<br>〒153-0043<br><a class="blank" href="https://goo.gl/maps/YhmJX1u3DVu1dH187" target="_blank"> <span>東京都目黒区東山3-12-1　コジマビルC-2</span></a></p>
+            </div>
+            <div id="access__map">
+              <div id="access__map--bw"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d686.9038461052363!2d139.68658502778868!3d35.64966038081873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4abfbd40001%3A0x22619896782a9841!2z5qCq5byP5Lya56S-44OG44Kt44OI44Km!5e0!3m2!1sja!2sjp!4v1624899435597!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            </div>
+          </div>
+          <div class="company-header" id="client">
+            <div class="company-header__title">
+              <h3 class="company-header__text">CLIENT</h3>
+            </div>
+            <div class="client">
+              <p>coming soon ...</p>
+            </div>
+          </div>
+          <div class="company-header" id="group">
+            <div class="company-header__title">
+              <h3 class="company-header__text">GROUP COMPANY</h3>
+            </div>
+            <div class="group-company">
+              <p> <a class="blank" href="https://tresinnovation.co.jp/" target="_blank"> <span>Tres Innovation株式会社</span></a></p>
+              <p><a class="blank" href="https://signpost-g.co.jp/" target="_blank"><span>株式会社SIGNPOST</span></a></p>
+              <p><a class="blank" href="https://integle.co.jp/" target="_blank"> <span>株式会社いンテグル</span></a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact-->
+      <section id="contact">
+        <div class="mv-area mv-area-contact-img" id="mv">
+          <div class="mv-area__img"><img src="img/contact/contact_mv_sub.jpg" alt="contactのメインビジュアル"><img src="img/contact/contact_mv_sub_sp.jpg" alt="contactのメインビジュアル">
+            <div class="mv-title-long"><span class="sr">C</span><span class="sr">O</span><span class="sr">N</span><span class="sr">T</span><span class="sr">A</span><span class="sr">C</span><span class="sr">T</span></div>
+          </div>
+        </div>
+        <div class="contact contact-inner">
+          <div class="contact-bg">
+            <p class="contact-bg__text">CONTACT</p>
+          </div>
+          <div class="mv-area-contact"></div>
+          <div class="contact-title">
+            <div class="contact-title__title"> <span class="sr">C</span><span class="sr">O</span><span class="sr">N</span><span class="sr">T</span><span class="sr">A</span><span class="sr">C</span><span class="sr">T</span></div>
+            <div class="contact-title__txt">
+              フォームに必要項目を入力の上、「内容を確認」ボタンを押してください。
+              なお、内容によっては、ご連絡までお時間がかかるものがございますので、あらかじめご了承ください。<br>※全て入力必須項目です。
+            </div>
+          </div>
+          <p class="contact-title__line"></p>
+          <form class="contact__form" action="">
+            <div class="contact__items">
+              <dl class="item">
+                <dt>会社名</dt>
+                <dd>
+                  <div class="form-input">
+                    <input class="form-text" type="text" placeholder="例）株式会社テキトウ">
+                  </div>
+                </dd>
+              </dl>
+              <dl class="item">
+                <dt>お名前</dt>
+                <dd>
+                  <div class="form-input">
+                    <input class="form-text" type="text" placeholder="例) 山田太郎">
+                  </div>
+                </dd>
+              </dl>
+              <dl class="item">
+                <dt>お名前(フリガナ)</dt>
+                <dd>
+                  <div class="form-input">
+                    <input class="form-text" type="text" placeholder="例) ヤマダタロウ">
+                  </div>
+                </dd>
+              </dl>
+              <dl class="item">
+                <dt>メールアドレス</dt>
+                <dd>
+                  <div class="form-input">
+                    <input class="form-text" type="text" placeholder="例) info@tekito.co.jp">
+                  </div>
+                </dd>
+              </dl>
+              <dl class="item">
+                <dt>電話番号</dt>
+                <dd>
+                  <div class="form-input">
+                    <input class="form-text" type="text" placeholder="例) 08000000000">
+                  </div>
+                </dd>
+              </dl>
+              <dl class="item">
+                <dt>お問い合わせ内容</dt>
+                <dd>
+                  <div class="form-input">
+                    <textarea class="form-textarea" type="text" placeholder="例) 〇〇について詳しく話を聞かせて欲しい。"></textarea>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="contact__form-btns">
+              <button class="form-btn">内容を確認</button>
+            </div>
+          </form>
+        </div>
+        <div class="next-nav">
+          <div class="next-nav-pg next-nav-contact-img"></div>
+          <div class="next-nav-guide">
+            <p class="next-nav-guide__text">NEXT</p>
+            <figure class="next-nav-guide__line"></figure>
+          </div><a class="next-nav-title" href="#home"> <span class="sr">H</span><span class="sr">O</span><span class="sr">M</span><span class="sr">E</span></a>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

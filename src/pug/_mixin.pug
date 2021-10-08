@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+//- --- 共通 ---
+$mvAreaAboutImg: #{url("../img/about/about_mv.jpg")};
+$mvAreaWorkImg: #{url("../img/work/work_mv.jpg")};
+$mvAreaMemberImg: #{url("../img/member/member_mv.jpg")};
+$mvAreaCompanyImg: #{url("../img/company/company_mv.jpg")};
+$mvAreaContactImg: #{url("../img/contact/contact_mv.jpg")};
+
+$nextNavContact: #{url("../img/contact/contact_next_nav.jpg")};
+//- sp
+$spNextNavContact: #{url("../img/contact/contact_next_nav_sp.jpg")};
+
+$blackColor: #1C1C1C;
+$snsColor: #F2F2F2;
+$roboto: 'Roboto';
+
+//- --- sns ---
+$twitter: '\f099';
+$instagram: '\f16d';
+$contact: '\f0e0';
+
+//- --- work ---
+$MpBgImage: #{url("../img/work/work_img_mp.jpg")};
+$CsBgImage: #{url("../img/work/work_img_cs.jpg")};
+$CsBgImage_2: #{url("../img/work/work_img_cs2.jpg")};
+$PpBgImage: #{url("../img/work/work_img_pp.jpg")};
+$CdBgImage: #{url("../img/work/work_img_cd.jpg")};
+
+ 
+
+//- --- 関数 ---
+@mixin mvBgImage($bgImage) {
+  background: $bgImage;
+}
+
+@mixin WorkMsBgImage($bgImage) {
+  background: $bgImage;
+}
+
+@mixin nextNavImage($bgImage) {
+  background: $bgImage;
+}
+
+@mixin sns($snsIcon) {
+  content: $snsIcon;
+  font-family: 'FontAwesome' !important;
+  speak: none;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-decoration: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  width: 100%;
+  color: $snsColor;
+  font-size: 3rem;
+}

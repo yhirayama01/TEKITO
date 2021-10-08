@@ -1,24 +1,872 @@
 doctype html
 html(lang="ja")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    meta(name="format-detection" content="telephone=no, address=no, email=no")
-    meta(name="description", content="株式会社テキトウは東京を拠点に活動しているクリエイティブチームです。WEB制作、WEBコンサルティング、商品企画・開発と多岐にわたるサービスを展開している為お客様にご満足して頂けるサービスを提供することが可能となっております。")
-    meta(name="keywords", content="WEB, WEB制作, WEBコンサルティング, 商品企画, 商品開発, マーケティングプロモーション, 広告代理事業, オンラインショップ運営")
-    
-    // SNS SEO
-    meta(property="og:locale" content="ja_JP")
-    meta(property="og:title", content="株式会社テキトウ | テキトウ、という名の物語。")
-    meta(property="og:site_name", content="株式会社テキトウ | テキトウ、という名の物語。")
-    meta(property="og:description", content="株式会社テキトウは東京を拠点に活動しているクリエイティブチームです。WEB制作、WEBコンサルティング、商品企画・開発と多岐にわたるサービスを展開している為お客様にご満足して頂けるサービスを提供することが可能となっております。")
-    meta(property="og:type", content="website")
-    //- のちに
-    meta(property="og:url", content="#")
-    meta(property="og:image", content="#")
+  include ./includes/_head
+  body
+    //- マウスポインター
+    //- div#cursor
+    //- div#stalker
+    // loader
+    div.loader-wrap
+      div.loader
+        | Loading...
 
-    title 株式会社テキトウ | テキトウ、という名の物語。
-    link(rel='stylesheet', href="css/style.css")
+    //　ヘッダー
+    header 
+      //- header
+      .logo
+        a(href="#home")
+          img.logo-black(src="img/logo/logo.svg", alt="株式会社テキトウのロゴ", width="100%")
+          img.logo-white(src="img/logo/logo-white.svg", alt="株式会社テキトウのロゴ", width="100%")
+      .menus
+        .menu-toggle.menu-toggle-btn
+          span
+          span
+          span
+
     
-    body 
+    //　ナビゲーション
+    div.nav
+      div.u-in
+        div.nav__bg
+        div.nav__content
+          div.menu
+            div
+              ul.menu__list
+                li
+                  a.menuLink(href="#home")
+                    p.menuLink__label
+                      span(style="transform: matrix(1, 0, 0, 1, 0, 0);") HOME
+                li
+                  a.menuLink(href="#about")
+                    p.menuLink__label
+                      span(style="transform: matrix(1, 0, 0, 1, 0, 0);") ABOUT
+                      
+                li
+                  a.menuLink(href="#work")
+                    p.menuLink__label
+                      span(style="transform: matrix(1, 0, 0, 1, 0, 0);") WORK
+              ul.menu__list-down
+                  li
+                    a.menuLink(href="#member")
+                      p.menuLink__label
+                        span(style="transform: matrix(1, 0, 0, 1, 0, 0);") MEMBER
+                        
+                  li
+                    a.menuLink(href="#company")
+                      p.menuLink__label
+                        span(style="transform: matrix(1, 0, 0, 1, 0, 0);") COMPANY
+
+          div.nav__footer
+            div.sns
+              ul
+                li.tw
+                  a.twitter(href="https://twitter.com/tres_innovation" target="_blank")
+                    span.icon
+                li.ig
+                  a.instagram(href="https://www.instagram.com/tresinnovation/?hl=ja" target="_blank")
+                    span.icon
+                li.ct
+                  a.contact(href="#contact" target="_blank")
+                    span.icon
+                li.wt
+                  a.wantedly(href="https://www.wantedly.com/companies/tresinnovation" target="_blank")
+                    span.icon
+                      img(src="img/nav/wantedly.png", alt="wantedlyのアイコン")
+
+    // メイン
+    main
+      // first view
+      //- テキトウという名の物語　first
+      section#home.js-section
+        div#home__inner
+          div#home__img
+            img(src="img/logo/tekito-title.svg", alt="テキトウ")
+          p#home__text.js-span-wrap-text テキトウ、という名の物語。
+        
+        div#scroll
+          div.scroll__inner
+            span 
+            |SCROLL
+
+      // images
+      //- 写真複数のページ
+      section#open-images.fixed
+        div#luxy
+          div.images
+            div.images-row.luxy-el(data-speed-y="-5")
+              div.image-wrapper
+                img(src="img/common/memory-image27.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image41.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image24.jpg", alt="思い出の写真")
+            div.images-row.luxy-el(data-speed-y="-5")
+              div.image-wrapper
+                img(src="img/common/memory-image15.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image5.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image44.jpg", alt="思い出の写真")
+            div.images-row.luxy-el(data-speed-y="-5")
+              div.image-wrapper
+                img(src="img/common/memory-image32.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image36.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image38.jpg", alt="思い出の写真")
+            div.images-row.scroll-trigger-1.luxy-el(data-speed-y="-5")
+              div.image-wrapper
+                img(src="img/common/memory-image1.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image10.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image39.jpg", alt="思い出の写真")
+            
+            div.images-row-small.luxy1.luxy-el(data-speed-y="8" data-offset="50")
+              div.image-wrapper
+                img(src="img/common/memory-image16.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image7.jpg", alt="思い出の写真")
+            div.images-row-small.luxy2.luxy-el(data-speed-y="8" data-offset="50")
+              div.image-wrapper
+                img(src="img/common/memory-image31.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image28.jpg", alt="思い出の写真")
+            div.images-row-small.luxy3.luxy-el(data-speed-y="8" data-offset="50")
+              div.image-wrapper
+                img(src="img/common/memory-image22.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image17.jpg", alt="思い出の写真")
+            div.images-row-small.luxy4.luxy-el(data-speed-y="8" data-offset="50")
+              div.image-wrapper
+                img(src="img/common/memory-image11.jpg", alt="思い出の写真")
+              div.image-wrapper
+                img(src="img/common/memory-image12.jpg", alt="思い出の写真")
+                
+      // about
+      section#about.js-section(name="about" data-section-name="about")
+        //- div.opening-black
+        //-   div.opening-black-img
+        //-     img(src="img/sample2.jpg")
+        //-     p.opening-black-title ABOUT
+        div#inner
+          div#mv.mv-area.mv-area-about-img
+            //- about_first
+            //- 黒から白に変わる。白のmvだけ作る。黒はメニューバーのところで作る
+            //- p.before-title ABOUT
+            div.mv-area__img
+              img(src="img/about/about_mv_sub.jpg", alt="aboutのメインビジュアル")
+              img(src="img/about/about_mv_sub_sp.jpg", alt="aboutのメインビジュアル")
+              div.mv-title 
+                span.sr A
+                span.sr B
+                span.sr O
+                span.sr U
+                span.sr T
+            
+          div.black-bg
+            div.ab-us
+              p#ab-us-title.white-text 私たちのおもい
+              p#ab-us-text-sub.white-text 適当とは、元来「適切かつ妥当」という意味があります。
+              p#ab-us-text.white-text.show お金とは、モノの価値を示す指標の一つですが、本来の価値とは人によって、それぞれ異なるものだと考えます。
+                br
+                |モノの真価とは！本当の感動とは！それを手にした瞬間ではなく、その先の「過程」にあるのではないでしょうか。
+                br
+                |貴方にあった"適当"なモノから始まるたった一つの物語！手にして満足するのか、その先をも楽しめるのかどうかは貴方次第。
+                br
+                |先に広がる無限の過程を「楽しみ」、モノの「価値高める」お手伝いをさせていただきます。
+              
+              
+            div.ab-bg-image-inner
+              div.ab-bg-image
+                div.ab-bg-image__images.luxy-el(data-horizontal="1" data-speed-x="-2")
+                  ul.image-row-1
+                    li
+                      div.image-wrapper
+                        img(src="img/common/memory-image42.jpg", alt="", width="500px")
+                    li
+                      div.image-wrapper
+                        img(src="img/common/memory-image41.jpg", alt="", width="500px")
+                    li
+                      div.image-wrapper
+                        img(src="img/common/memory-image44.jpg", alt="", width="500px")
+                    li
+                      div.image-wrapper
+                        img(src="img/common/memory-image36.jpg", alt="", width="500px")
+                  ul.image-row-2
+                    li
+                      div.image-wrapper
+                        img(src="img/common/memory-image47.jpg", alt="", width="500px")
+                    li
+                      div.image-wrapper
+                        img(src="img/common/memory-image36.jpg", alt="", width="500px")
+            div.ab-us-vision
+              //- about_box3
+              div.ab-us-vision__inner
+                div
+                  p.shooting-line-vi
+                  p.ab-us-vision__sub-text-0 VISION
+                div.ab-text
+                  span.ab-us-vision__sub-text.white-text Make the world smile
+                  p.ab-us-vision__text.white-text
+                    |世界中の人たちを
+                    br
+                    |笑顔にす
+                    span.sr る
+          div.ab-us-mission
+            //- about_box4
+            div.ab-us-mission__inner
+              div
+                p.shooting-line-mi
+                p.ab-us-mission__sub-text MISSION
+              p.ab-us-mission__text
+                |ワクワクを
+                br
+                |創造し続け
+                br
+                |笑顔を生み続ける
+          div.ab-us-value
+            //- about_box5
+            div.ab-us-value__inner
+              div
+                p.shooting-line-va
+                p.ab-us-value__sub-text VALUE
+              div.ab-us-value__text
+                div.ab-us-value__text-sgl
+                  span.ab-us-value__text-l.space テ
+                  span.ab-us-value__text-m ごころ  -  手心
+                  br
+                  span.ab-us-value__text-s 一人一人に対して、愛情を持って接する。
+                div.ab-us-value__text-sgl
+                  span.ab-us-value__text-l.space キ
+                  span.ab-us-value__text-m ごころ  -  気心
+                  br
+                  span.ab-us-value__text-s 互いに何も隠す必要のない間柄を目指す。
+                div.ab-us-value__text-sgl
+                  span.ab-us-value__text-l.space ト
+                  span.ab-us-value__text-m うしん  -  童心
+                  br
+                  span.ab-us-value__text-s.br 子供のような純粋な心を持ってワクワクを創造する。
+                div.ab-us-value__text-sgl
+                  span.ab-us-value__text-l.space ウ
+                  span.ab-us-value__text-m しん  -  有心
+                  br
+                  span.ab-us-value__text-s.br 思慮を持ち、常に「心」の感じられる行動と判断を下す。
+
+      // work
+      section#work
+        //- work
+        div.inner
+          div#mv.mv-area.mv-area-work-img
+            //- work_first
+            //- 黒から白に変わる。白のmvだけ作る。黒はメニューバーのところで作る
+            //- p.before-title WORK
+            div.mv-area__img
+              img(src="img/work/work_mv_sub.jpg", alt="workのメインビジュアル")
+              img(src="img/work/work_mv_sub_sp.jpg", alt="workのメインビジュアル")
+              div.mv-title 
+                span.sr W
+                span.sr O
+                span.sr R
+                span.sr K
+
+          div.wr-content
+            //- work_box1
+            div.wr-bg
+              p.wr-bg__text Biii
+            p.wr-content__title オンラインショップBiii
+            p.wr-content__text
+              |美とは人類がずっと追い求めていたもの。
+              br
+              br
+              |楽して美しく(キレイ)になりたい。
+              br
+              |誰に否定されても、きっと誰もが思う理想の方法。
+              br
+              br
+              |楽
+              br
+              br
+              |とは、サボることや、手を抜くことではありません。
+              br
+              br
+              |楽とは、そうなる過程をも楽しむこと。
+              br
+              |キレイになることはもちろん、
+              br
+              |少しずつ美しくなっていく自分をも楽しむこと。
+              br
+              br
+              |オンラインショップBiiiは、
+              br
+              |「楽して美しくなりたい」
+              br
+              br
+              |そんな女性を全力で応援いたします。
+          div.wr-content-2
+            div.wr-desc
+              div.pro
+                //- work_box3
+                h3.wr-title PRODUCT
+                ul.pd-list
+                  li.pd-list__item
+                    p.img
+                      img(src="img/work/shop-item1.jpg", alt="商品")
+                  li.pd-list__item
+                    p.img
+                      img(src="img/work/shop-item2.jpg", alt="商品")
+                  li.pd-list__item
+                    p.img
+                      img(src="img/work/shop-item3.jpg", alt="商品")
+                div.view-site
+                  a.view-site__link.blank(href="https://biii.jp/" target="_blank") VIEW SITE
+                    
+
+              div.ms
+                //- work_box2
+                h3.wr-title MISSION
+                div.ms-tile
+                  div.ms-tile__inner
+
+                    div.ms-tile-item.ms-box1
+                      //- 初めは隠す
+                      div.tile-hov.ms-tile--1
+                        div.tile-hov__img
+                          img(src="img/work/mission-img1.jpg")
+                        p.icon-sign
+                          span
+                          span
+
+                      //- 初めから表示
+                      div.ms-tile-item__inner
+                        dl.tile-ttl
+                          dt.small マーケティングプロモーション
+                          dt
+                            |MARKETING
+                            |PROMOTION
+                          dd 出会いのきっかけ創り。
+                        div.tile-cont
+                          |今日、SNSやYouTube、LINE広告など接触機会は様々あるものの、
+                          |どうすれば商品の魅力を最大限伝えることができるのか？
+                          |目まぐるしく変化する時代や環境に素早く対応し、最適な戦略を考え、施策実行・検証を繰り返し行います。
+
+                    div.ms-tile-item.ms-box2
+                      //- 初めは隠す
+                      div.tile-hov.ms-tile--2
+                        div.tile-hov__img
+                          img(src="img/work/mission-img2.jpg")
+                        p.icon-sign
+                          span
+                          span
+
+                      //- 初めから表示
+                      div.ms-tile-item__inner
+                        dl.tile-ttl
+                          dt.small カスタマーサービス
+                          dt 
+                            |COSTOMER
+                            |SERVICE
+                          dd 安心できる環境作り。
+                        div.tile-cont
+                          |欲しいもの、購入した商品が当たり前に手元へ届く。
+                          |そんな"当たり前"に想いを込めて、お客様対応をさせていただいております。
+                          |直接手渡しでのお届けができないからこそ、込める想い！
+                          |「どうすればよりお客様が心から安心して購入できるか？」を日々考え、
+                          |ぬくもりを感じていただける対応を心掛けています。
+                    div.ms-tile-item.ms-box3
+                      //- 初めは隠す
+                      div.tile-hov.ms-tile--3
+                        div.tile-hov__img
+                          img(src="img/work/mission-img3.jpg")
+                        p.icon-sign
+                          span
+                          span
+
+                      //- 初めから表示
+                      div.ms-tile-item__inner
+                        dl.tile-ttl
+                          dt.small カスタマーサクセス
+                          dt
+                            |COSTOMER
+                            |SUCCESS
+                          dd 感動を与え過程を楽しませる。
+                        div.tile-cont
+                          |「継続は力なり」という諺があらわす通り、
+                          |継続＝過程にこそ真の価値があると考える私たちは、「コツコツ」続けてもらう為のサポートは惜しみません。
+                          |全てのお客様に、成功体験としての有意義な過程をお届けしたい！
+                          |何をやればワクワクできるか？どうすれば喜んでいただけるのか？
+                          |常に様々な企画を考え、皆さまの「コツコツ」を全力でお手伝いします。
+                    
+                    div.ms-tile-item.ms-box4
+                      //- 初めは隠す
+                      div.tile-hov.ms-tile--4
+                        div.tile-hov__img
+                          img(src="img/work/mission-img5.jpg")
+                        p.icon-sign
+                          span
+                          span
+
+                      //- 初めから表示
+                      div.ms-tile-item__inner
+                        dl.tile-ttl
+                          dt.small プロダクトプランニング
+                          dt 
+                            |PRODUCT 
+                            |PLANNING
+                          dd 私たちが使いたくない物は絶対に作らない。
+                        div.tile-cont
+                          |「私たちが使いたくない物は絶対に作らない」
+                          |売れるか？売れないか？ではなく、私たちが心から"面白い""使いたい"と思えるモノを形にしたい！
+                          |だからこそ、商品を開発する上で一切妥協は致しません。
+                          |時間や労力がかかっても、真に納得がいくまで何度も何度でも試行錯誤を重ねます。
+                          |本当に納得できるからこそ、お客様はもちろん自分たちの家族や親友にもおすすめできます。
+
+                    div.ms-tile-item.ms-box5
+                      //- 初めは隠す
+                      div.tile-hov.ms-tile--5
+                        div.tile-hov__img
+                          img(src="img/work/mission-img4.jpg")
+                        p.icon-sign
+                          span
+                          span
+
+                      //- 初めから表示
+                      div.ms-tile-item__inner
+                        dl.tile-ttl
+                          dt.small クリエイティブデザイン
+                          dt 
+                            |CREATIVE
+                            |DESIGN
+                          dd 「オシャレ」を創造し続け、商品価値を高める。
+                        div.tile-cont
+                          |どうすれば興味、関心を持ってもらえるのか？
+                          |実際に手に取っていただいた商品を「オシャレ」「可愛い」「カッコイイ」と感じてもらい、
+                          |持っている事それ自体がひとつのステータスになるようなデザイン、
+                          |商品価値を最大限高められるクリエイティブを常に心掛け、制作しております。
+          div#mv.mv-area.mv-area-member-img.company-member
+            //- about_first
+            //- 黒から白に変わる。白のmvだけ作る。黒はメニューバーのところで作る
+            //- p.before-title ABOUT
+            div.mv-area__img
+              img(src="img/member/member_mv_sub.jpg", alt="memberのメインビジュアル")
+              img(src="img/member/member_mv_sub_sp.jpg", alt="memberのメインビジュアル")
+              div.mv-title-member
+                span.sr M
+                span.sr E
+                span.sr M
+                span.sr B
+                span.sr E
+                span.sr R
+
+      // member
+      section#member
+        //- member
+        div.members-inner.mv-area
+          //- 背景のテキスト
+          div.member-bg
+            p.member-bg__text MEMBER
+          //- p.sub-title.member-sub-title member
+
+          //- memberの写真
+          ul.members-list-up
+            //- リスト
+            li.members-list-up__item
+              div.img
+                a(href="#modal_01")
+                  img(src="img/member/yamada/yamada2@2x.jpg")
+                  img(src="img/member/yamada/yamada1@2x.jpg")
+              //- モーダル表示
+              div.remodal(data-remodal-id="modal_01")
+                button.remodal-close(data-remodal-action="close")
+                div.remodal__box
+                  div.remodal__inner
+                    div.name-image
+                      //- img(src="img/sample-name.png")
+                    //- 自己紹介テキスト
+                    //- div.remodal__back-txt
+                    //-   |Maria Yamamoto
+                    div.remodal-text
+                      div.remodal-text__m-txt
+                        |ポジティブに
+                        br
+                        |生きる
+                      div.remodal-text__s-txt
+                        |長い人生を歩んでいく限り、ミスや失敗はつきもの！それでも、考え方ひとつで、物事の見方は180度変わります。常に「今した失敗は、上手くいくのに必要な経験」って考えてます！失敗やミスを、受け入れた後にどう考え行動するのか、前のめり過ぎるほどのポジティブ思考で生きてます
+                        br
+                        br
+                        |週末は、ゴルフの打ちっぱなし→ジム→サウナ→晩酌が日課になってます。そして、お酒を飲まない日は、ほぼありません。「お酒を飲まない。。。」家でどう過ごしていいのか、見出すことができない。お酒を飲んでも、二日酔いにも滅多にならないから元気が続く！嫁にも「元気過ぎない？」と言われる自分が心地よくて！もっと元気になってしまう！負健康のループ！どこまで元気で居続ける事ができるのか、元気なじい様になりたい！
+                    //- プロフィール
+                    div.remodal-prof
+                      div.remodal-prof__img
+                        img(src="img/member/yamada/yamada3@2x.jpg")
+                      div.remodal-prof__prof-name
+                        |山田 伸一
+                        span.remodal-prof__prof-name-sub 代表取締役
+                      div.remodal-prof__prof-txt
+                        |初めての社会人＝がってん寿司のキッチンバイト
+                        br
+                        |上下関係の厳しさを知った＝引っ越しバイト
+                        br
+                        |人間の欲深さを知った＝バーテン
+                        bt
+                        |サラリーマンに憧れて入社したブラック企業＝財務経理
+                        br
+                        |仲間内で企業！ガムシャラに働いた＝WEB制作と通販会社
+
+            li.members-list-up__item
+              div.img
+                a(href="#modal_02")
+                  img(src="img/member/miyazima/miyazima2@2x.jpg")
+                  img(src="img/member/miyazima/miyazima1@2x.jpg")
+              //- モーダル表示
+              div.remodal(data-remodal-id="modal_02")
+                button.remodal-close(data-remodal-action="close")
+                div.remodal__box
+                  div.remodal__inner
+                    div.name-image
+                      //- img(src="img/sample-name.png")
+                    //- 自己紹介テキスト
+                    //- div.remodal__back-txt
+                    //-   |Maria Yamamoto
+                    div.remodal-text
+                      div.remodal-text__m-txt
+                        |なんでもオッケー
+                      div.remodal-text__s-txt
+                        |人からはよくメガネで色白で大人しそうだねと言われますけど、アウトドア派で学生時代はサッカーに打ち込み、大人になってからはスケートにBMXにピストバイクとタイヤのついてるものはなんでも好きで乗りこなせて収集癖もある典型的な男子でキャンプやフェスにも身体ひとつで行ってしまう程です！笑かと思いきやインドアな一面もあり一日中ゲームをやったり映画を見たりオールマイティーに人生を楽しんでいます！将来はガレージ付きの家にクラシックSUVとバイクを２台ほど買い、大好きな大型犬と子供と暮らしたいです！
+                      div.other-foreword
+                        p.other-foreword__title 座右の銘
+                        p.other-foreword__text 老若男女
+                      div.other-foreword
+                        p.other-foreword__title 好きな生き方
+                        p.other-foreword__text 好きなことをやりたいようにやって年に1度フジロックに行く。
+                    //- プロフィール
+                    div.remodal-prof
+                      div.remodal-prof__img
+                        img(src="img/member/miyazima/miyazima3@2x.jpg")
+                      div.remodal-prof__prof-name
+                        |宮嶋 崇至
+                      div.remodal-prof__prof-txt
+                        |16歳の時大蔵興業
+                        br
+                        |19歳の時舞伎町ホスト
+                        br
+                        |職業訓練学校
+                        br
+                        |25歳の時某制作会社
+                        br
+                        |28歳の時トレスイノベーション株式会社
+                        br
+                        |29歳の時株式会社TEKITO
+            li.members-list-up__item
+              div.img
+                a(href="#modal_03")
+                  img(src="img/member/siraki/siraki3@2x.jpg")
+                  img(src="img/member/siraki/siraki2@2x.jpg")
+              //- モーダル表示
+              div.remodal(data-remodal-id="modal_03")
+                button.remodal-close(data-remodal-action="close")
+                div.remodal__box
+                  div.remodal__inner
+                    div.name-image
+                      //- img(src="img/sample-name.png")
+                    //- 自己紹介テキスト
+                    //- div.remodal__back-txt
+                    //-   |Maria Yamamoto
+                    div.remodal-text
+                      div.remodal-text__m-txt
+                        |マイペース
+                      div.remodal-text__s-txt
+                        |ストレスなく楽しく自由にまいにち過ごしたい。
+                        br
+                        br
+                        |はじめまして！
+                        br
+                        |オンラインショップBiiiでは責任者をさせていただいております、白木です☻お客様と関わらせていただく機会も多いので、日々親切・丁寧を心掛けています。
+                        br
+                        |仕事もプライベートもメリハリがだいじ！将来は犬と猫に囲まれて幸せに暮らしたい！
+                    //- プロフィール
+                    div.remodal-prof
+                      div.remodal-prof__img
+                        img(src="img/member/siraki/siraki1@2x.jpg")
+                      div.remodal-prof__prof-name
+                        |白木 茉優
+                      div.remodal-prof__prof-txt
+                        |学生時代、もつ鍋と焼肉のお店
+                        br
+                        |スンドゥブ屋さん
+                        br
+                        |内定決まっていた就職先で先行アルバイト
+                        br
+                        |社会人になって、アパレル
+                        br
+                        |株式会社TEKITO
+            li.members-list-up__item
+              div.img
+                a(href="#modal_04")
+                  img(src="img/member/hattori/hattori2.jpg")
+                  img(src="img/member/hattori/hattori1.jpg")
+              //- モーダル表示
+              div.remodal(data-remodal-id="modal_04")
+                button.remodal-close(data-remodal-action="close")
+                div.remodal__box
+                  div.remodal__inner
+                    div.name-image
+                      //- img(src="img/sample-name.png")
+                    //- 自己紹介テキスト
+                    //- div.remodal__back-txt
+                    //-   |Maria Yamamoto
+                    div.remodal-text
+                      div.remodal-text__m-txt
+                        |童心忘れるべからず
+                      div.remodal-text__s-txt
+                        |人は大人になるにつれて知識が増え、世界が広がり、価値観にも大きな変化が起きる生き物です。それは良い意味もあれば、悪い意味でも変化は起こるものだと思っています。変わるべきところと、変わってはいけないところ。懐かしい竹馬の友と再会した時、「やっぱり変わってないな」と互いに感じられる安心感。子どもの時には感じられていた暮らしの中にある小さな発見や感動を、大人になってもいつまでも変わらず感じ取れるようでいること。一歩間違えれば、大人になりきれないアダルトチルドレンと捉えられてしまうかもしれませんが、曇りのない眼、邪推のない頭、純粋な心子どもに学ぶ事とは、実はとても多いのではないでしょうか？それがどんなにくだらないことでも、誰にも理解されないようなことであっても、少しでも気になれば徹底的に調べ、本気で実践してみる。「大人の知恵や技術、経済力で子どものようなことを本気でやる」ことが、自分にとっての人生最大の幸せです。
+                    //- プロフィール
+                    div.remodal-prof
+                      div.remodal-prof__img
+                        img(src="img/member/hattori/hattori3.jpg")
+                      div.remodal-prof__prof-name
+                        |服部 能純
+                      div.remodal-prof__prof-txt
+                        |秘密です。
+            li.members-list-up__item
+              div.img
+                a(href="#modal_05")
+                  img(src="img/member/itazuka/itazuka3@2x.jpg")
+                  img(src="img/member/itazuka/itazuka1@2x.jpg")
+              //- モーダル表示
+              div.remodal(data-remodal-id="modal_05")
+                button.remodal-close(data-remodal-action="close")
+                div.remodal__box
+                  div.remodal__inner
+                    div.name-image
+                      //- img(src="img/sample-name.png")
+                    //- 自己紹介テキスト
+                    //- div.remodal__back-txt
+                    //-   |Maria Yamamoto
+                    div.remodal-text
+                      div.remodal-text__m-txt
+                        |『頑張れ』より
+                        br
+                        |『大丈夫』と言う
+                      div.remodal-text__s-txt
+                        |『頑張れ』と背中を押すのではなく、『大丈夫』て肩並べて、いつでも寄り添ってあげられる人でいたいです。今までも、そう生きてきました。
+                        br
+                        br
+                        |初めまして、飯塚です。デザイナーをさせていただいています。日課は『ワークアウト』『クリエイト』週課は『映画を２本鑑賞』『動画制作』この中でもワークアウトに力を入れています。がっしりしてる体でデザイナーってかっこよくないですか。笑夢は『オシャレな家に住むこと』毎週金曜日には友人などを招いて、パーティーを開きたいっていう妄想付きです。※入場料は何かしらのリキュールでOK！こんな僕ですが、精一杯より良いもの、オシャレなものを作っていきますので、どうぞよろしくお願い致します。
+                    //- プロフィール
+                    div.remodal-prof
+                      div.remodal-prof__img
+                        img(src="img/member/itazuka/itazuka1@2x.jpg")
+                      div.remodal-prof__prof-name
+                        |飯塚 昂二
+                      div.remodal-prof__prof-txt
+                        |高校生になり初めて、居酒屋おしおでバイト
+                        br
+                        |専門生になり業務スーパーの品出し、ケンタッキーのキッチンでバイト
+                        br
+                        |専門生生活を焼き鳥屋すみれ赤羽店に捧げる        
+        
+      // company
+      section#company
+        //- company
+        div#mv.mv-area.mv-area-company-img
+          //- about_first
+          //- 黒から白に変わる。白のmvだけ作る。黒はメニューバーのところで作る
+          //- p.before-title ABOUT
+          div.mv-area__img
+            img(src="img/company/company_mv_sub.jpg", alt="companyのメインビジュアル")
+            img(src="img/company/company_mv_sub_sp.jpg", alt="companyのメインビジュアル")
+            div.mv-title-long
+              span.sr C
+              span.sr 0
+              span.sr M
+              span.sr P
+              span.sr A
+              span.sr N
+              span.sr Y
+        div.company-inner
+          //- 背景のテキスト
+          div.company-bg
+              p.company-bg__text COMPANY
+          div.mv-area-company
+          div.company-title
+            span.sr C
+            span.sr O
+            span.sr M
+            span.sr P
+            span.sr A
+            span.sr N
+            span.sr Y
+            p.company-title__line
+
+          div.p-company.company-header
+            div.company-header__title
+              //- company_box1
+              h3.company-header__text COMPANY PROFILE
+            div.p-company__table
+              table
+                tbody
+                  tr
+                    th 社名
+                    td 株式会社テキトウ
+                  tr
+                    th 代表取締役
+                    td 山田 伸一
+                  tr
+                    th 資本金
+                    td 500万
+                  tr
+                    th 業務内容
+                    td 
+                      |通信販売事業
+                      br
+                      |商品企画
+                      br
+                      |開発事業
+                  tr
+                    th 所在地
+                    td 
+                      |〒153-0043
+                      br
+                      a.blank(href="https://goo.gl/maps/YhmJX1u3DVu1dH187" target="_blank") 
+                        span 東京都目黒区東山3-12-1　コジマビルC-2
+                  tr
+                    th 設立年月日
+                    td 2017年9月15日
+
+          div#access.company-header
+            //- company_box2
+            div.company-header__title
+              //- company_box1
+              h3.company-header__text ACCESS
+            div#access-content
+              p#access-content__text
+                |東急電鉄田園都市線「池尻大橋」駅より徒歩5分
+                br
+                |〒153-0043
+                br
+                a.blank(href="https://goo.gl/maps/YhmJX1u3DVu1dH187" target="_blank") 
+                  span 東京都目黒区東山3-12-1　コジマビルC-2
+            div#access__map
+              div#access__map--bw
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d686.9038461052363!2d139.68658502778868!3d35.64966038081873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4abfbd40001%3A0x22619896782a9841!2z5qCq5byP5Lya56S-44OG44Kt44OI44Km!5e0!3m2!1sja!2sjp!4v1624899435597!5m2!1sja!2sjp" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+          div#client.company-header
+            //- company_box3
+            div.company-header__title
+              //- company_box1
+              h3.company-header__text CLIENT
+            div.client
+              //- p 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 株式会社まるまる / 
+              p coming soon ...
+
+          div#group.company-header
+            //- company_box4
+            div.company-header__title
+              //- company_box1
+              h3.company-header__text GROUP COMPANY
+            div.group-company
+              p 
+                a.blank(href="https://tresinnovation.co.jp/" target="_blank") 
+                  span Tres Innovation株式会社
+              p
+                a.blank(href="https://signpost-g.co.jp/" target="_blank")
+                  span 株式会社SIGNPOST
+              p
+                a.blank(href="https://integle.co.jp/" target="_blank") 
+                  span 株式会社いンテグル
+
+      // contact
+      section#contact
+        //- contact
+        div#mv.mv-area.mv-area-contact-img
+          //- about_first
+          //- 黒から白に変わる。白のmvだけ作る。黒はメニューバーのところで作る
+          //- p.before-title ABOUT
+          div.mv-area__img
+            img(src="img/contact/contact_mv_sub.jpg", alt="contactのメインビジュアル")
+            img(src="img/contact/contact_mv_sub_sp.jpg", alt="contactのメインビジュアル")
+            div.mv-title-long
+              span.sr C
+              span.sr O
+              span.sr N
+              span.sr T
+              span.sr A
+              span.sr C
+              span.sr T
+        div.contact.contact-inner
+          //- 背景のテキスト
+          div.contact-bg
+            p.contact-bg__text CONTACT
+          div.mv-area-contact
+          div.contact-title
+            div.contact-title__title 
+              span.sr C
+              span.sr O
+              span.sr N
+              span.sr T
+              span.sr A
+              span.sr C
+              span.sr T
+            div.contact-title__txt
+              |フォームに必要項目を入力の上、「内容を確認」ボタンを押してください。
+              |なお、内容によっては、ご連絡までお時間がかかるものがございますので、あらかじめご了承ください。
+              br
+              |※全て入力必須項目です。
+          p.contact-title__line
+
+          form.contact__form(action="")
+            div.contact__items
+              dl.item
+                dt 会社名
+                dd
+                  div.form-input
+                    input.form-text(type="text" placeholder="例）株式会社テキトウ")
+              dl.item
+                dt お名前
+                dd
+                  div.form-input
+                    input.form-text(type="text" placeholder="例) 山田太郎")
+              dl.item
+                dt お名前(フリガナ)
+                dd
+                  div.form-input
+                    input.form-text(type="text" placeholder="例) ヤマダタロウ")
+              dl.item
+                dt メールアドレス
+                dd
+                  div.form-input
+                    input.form-text(type="text" placeholder="例) info@tekito.co.jp")
+              dl.item
+                dt 電話番号
+                dd
+                  div.form-input
+                    input.form-text(type="text" placeholder="例) 08000000000")
+              dl.item
+                dt お問い合わせ内容
+                dd
+                  div.form-input
+                    textarea.form-textarea(type="text" placeholder="例) 〇〇について詳しく話を聞かせて欲しい。")
+              //- dl.item.form-privacy
+              //-   dt 個人情報保護方針
+              //-   dd
+              //-     label.form-checkbox
+              //-       input.checkbox(type="checkbox")
+              //-       i.icon
+              //-       span 個人情報保護方針に同意する
+
+            div.contact__form-btns
+              button.form-btn
+                |内容を確認
+
+        div.next-nav
+          //- work_next
+          div.next-nav-pg.next-nav-contact-img
+          div.next-nav-guide
+              p.next-nav-guide__text NEXT
+              figure.next-nav-guide__line
+          a.next-nav-title(href="#home") 
+            span.sr H
+            span.sr O
+            span.sr M
+            span.sr E
